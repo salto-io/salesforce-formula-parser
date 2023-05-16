@@ -1,6 +1,6 @@
 {
   "name": "@salto-io/salesforce-formula-parser",
-  "version": "0.1.3",
+  "version": "0.0.2",
   "license": "Apache-2.0",
   "description": "Salto Salesforce formula parser",
   "repository": {
@@ -13,7 +13,8 @@
   "files": [
     "src",
     "index.ts",
-    "tsconfig.json"
+    "tsconfig.json",
+    "*.js"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,24 +29,22 @@
     "postinstall": "tsc --outDir ./dist"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "moo": "^0.5.2"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "@types/lodash": "^4.14.168",
     "@types/node": "^12.7.1",
-    "@types/moo": "^0.5.5",
+    "@types/lodash": "^4.14.168",
     "@typescript-eslint/eslint-plugin": "4.22.1",
     "@typescript-eslint/parser": "4.22.1",
-    "concurrently": "^5.2.0",
     "eslint": "^6.2.2",
     "eslint-config-airbnb": "18.0.1",
-    "eslint-plugin-header": "^3.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.6.4",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-header": "^3.0.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "concurrently": "^5.2.0",
     "jest": "^27.4.5",
     "jest-extended": "^1.2.0",
     "ts-jest": "^27.1.2",
