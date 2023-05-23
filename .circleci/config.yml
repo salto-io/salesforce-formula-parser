@@ -36,12 +36,7 @@ jobs:
 
       - run:
           name: Run unit tests
-          command: yarn test -w 4 --coverage=false--reporters=jest-junit
-          environment:
-            JEST_JUNIT_OUTPUT: "reports/unittests/test-results.xml"
-
-      - store_test_results:
-          path: reports
+          command: yarn test --coverage=false
 
   publish_on_version_change:
     docker:
