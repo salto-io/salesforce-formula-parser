@@ -40,6 +40,13 @@ describe('extractFormulaIdentifiers', () => {
       /*identifier*/
       // identifier identifier
       /* identifier */
+      
+      /*
+      identifier
+      identifier
+      identifier
+      */
+      
       `
       expect(extractFormulaIdentifiers(formula)).toHaveLength(0)
     })
@@ -86,6 +93,7 @@ describe('extractFormulaIdentifiers', () => {
     })
     it('Should not reorder identifiers', () => {
       expect(extractFormulaIdentifiers('IF(zzz, zzz, bbb)')).toEqual(['zzz', 'bbb'])
+      expect(extractFormulaIdentifiers('IF(zzz, bbb, zzz)')).toEqual(['zzz', 'bbb'])
     })
     it('Should not merge identifiers across whitespace', () => {
       expect(extractFormulaIdentifiers('identifier1 identifier2')).toEqual(['identifier1', 'identifier2'])
@@ -96,9 +104,11 @@ describe('extractFormulaIdentifiers', () => {
       /*
       Some comment
       */
+      
       /***
       Some comment
       here too ***/
+      
       SomeOtherField,
       // One-line comment
       YetAnotherField)
